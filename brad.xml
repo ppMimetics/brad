@@ -1,3 +1,27 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="11" x="76" y="21"></block>
+  <block type="oled_cleardisplay" id="69" x="227" y="14">
+    <next>
+      <block type="oled_setcursor" id="78" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="85">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="92">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="oled_drawnumber" id="101" inline="true">
+            <value name="NUMBER">
+              <block type="sensor_spectrometer" id="60">
+                <field name="LIGHT">BLUE</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
 </xml>
